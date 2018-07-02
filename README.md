@@ -18,6 +18,22 @@ Provides a basic template, "batteries included":
 
 This project is intended to be used with v8 (LTS Carbon) release of [Node.js](https://nodejs.org) or newer and [NPM][https://www.npmjs.com/]. Make sure you have those installed.
 
+### Download
+```sh
+$ git clone https://github.com/jerrywdlee/koa-typescript-boilerplate.git
+```
+
+### Install
+```sh
+$ cd koa-typescript-boilerplate
+$ npm i
+```
+
+### Run dummy application
+```sh
+$ npm run watch
+```
+
 Now start adding your code in the `src` and unit tests in the `__tests__` directories. Have fun and build amazing things 🚀
 
 ### Unit tests in JavaScript
