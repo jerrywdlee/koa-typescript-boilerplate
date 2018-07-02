@@ -1,0 +1,54 @@
+{
+  "name": "koa-typescript-boilerplate",
+  "version": "0.0.0",
+  "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 8.9.0"
+  },
+  "main": "build/app.js",
+  "devDependencies": {
+    "@types/jest": "~22.2.3",
+    "@types/koa": "^2.0.46",
+    "@types/koa-router": "^7.0.30",
+    "@types/node": "~8.10.18",
+    "concurrently": "^3.6.0",
+    "del-cli": "^1.1.0",
+    "jest": "~23.1.0",
+    "nodemon": "^1.17.5",
+    "ts-jest": "~22.4.6",
+    "ts-node": "^7.0.0",
+    "tslint": "~5.10.0",
+    "tslint-microsoft-contrib": "~5.0.3",
+    "tsutils": "~2.27.1",
+    "typescript": "~2.9.1",
+    "watch": "^1.0.2"
+  },
+  "scripts": {
+    "dev": "ts-node -P tsconfig.json src/app.ts",
+    "tsr": "ts-node -P tsconfig.json",
+    "repl": "ts-node",
+    "ts": "ts-node",
+    "clean": "del 'coverage/*' 'build/*' 'tmp/*' '!.gitkeep'",
+    "build": "tsc -p tsconfig.release.json",
+    "watch": "concurrently -r -k \"watch 'npm run lint:build && tsc -p tsconfig.release.json' src/\" \"nodemon --watch build/\"",
+    "lint:build": "tslint -t stylish --project \"tsconfig.release.json\"",
+    "lint": "tslint -t stylish --project \"tsconfig.json\"",
+    "pretest": "npm run lint",
+    "test": "npm run test-only",
+    "test-only": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "author": "Jerry lee <jerrywdlee@gmail.com> (https://github.com/jerrywdlee/hass-ts)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jerrywdlee/hass-ts.git"
+  },
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "tslib": "~1.9.2"
+  }
+}
