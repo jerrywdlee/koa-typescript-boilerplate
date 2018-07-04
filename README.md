@@ -16,7 +16,7 @@ Provides a basic template, "batteries included":
 
 ## Quick start
 
-This project is intended to be used with v8 (LTS Carbon) release of [Node.js](https://nodejs.org) or newer and [NPM][https://www.npmjs.com/]. Make sure you have those installed.
+This project is intended to be used with v8 (LTS Carbon) release of [Node.js](https://nodejs.org) or newer and [NPM](https://www.npmjs.com/). Make sure you have those installed.
 
 ### Download
 ```sh
